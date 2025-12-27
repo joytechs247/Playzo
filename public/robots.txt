@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /games
+Allow: /categories
+Allow: /leaderboard
+Disallow: /account
+Disallow: /admin
+Disallow: /api/
+Disallow: /private
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://playzo.vercel.app/sitemap.xml

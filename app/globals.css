@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root styles */
+:root {
+  --color-primary: #FF6EC7;
+  --color-secondary: #6EFCFF;
+  --color-dark: #0F172A;
+  --color-darker: #1a1a2e;
+  --color-darkest: #16213e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gradient-to-b from-playzo-navy via-playzo-darker to-playzo-dark text-white font-body;
+  background-attachment: fixed;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-headline font-bold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+h4 {
+  @apply text-xl md:text-2xl;
+}
+
+/* Links */
+a {
+  @apply transition-colors duration-300;
+}
+
+/* Buttons */
+button {
+  @apply font-semibold;
+}
+
+/* Inputs */
+input, textarea, select {
+  @apply bg-playzo-darker border border-playzo-cyan/30 rounded-lg text-white placeholder-playzo-cyan/50 focus:outline-none focus:border-playzo-pink focus:shadow-neon transition-all duration-300;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-playzo-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-playzo-pink rounded-lg hover:bg-playzo-warm;
+}
+
+/* Selection */
+::selection {
+  @apply bg-playzo-pink text-white;
+}
+
+::-moz-selection {
+  @apply bg-playzo-pink text-white;
+}
+
+/* Custom utility classes */
+.glass-morphism {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-lg;
+}
+
+.neon-border {
+  @apply border border-playzo-pink shadow-neon;
+}
+
+.neon-glow {
+  @apply shadow-neon-pink;
+}
+
+.neon-glow-cyan {
+  @apply shadow-neon-cyan;
+}
+
+.glow-on-hover {
+  @apply transition-all duration-300 hover:shadow-neon-lg hover:shadow-neon-pink;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-playzo-pink to-playzo-cyan;
+}
+
+.gradient-border {
+  @apply relative after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-r after:from-playzo-pink after:to-playzo-cyan after:-z-10;
+}
+
+.card-base {
+  @apply bg-playzo-darker/50 backdrop-blur-sm border border-playzo-cyan/20 rounded-lg p-4 transition-all duration-300 hover:border-playzo-pink/40 hover:shadow-neon;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-playzo-pink to-playzo-warm text-white font-bold rounded-lg hover:shadow-neon-lg transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-playzo-darker border border-playzo-cyan text-playzo-cyan font-bold rounded-lg hover:bg-playzo-cyan hover:text-playzo-navy transition-all duration-300;
+}
+
+.btn-outline {
+  @apply px-6 py-3 border-2 border-playzo-pink text-playzo-pink font-bold rounded-lg hover:bg-playzo-pink hover:text-white transition-all duration-300;
+}
+
+/* Grid system */
+.game-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.game-grid-compact {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    rgba(255, 110, 199, 0.1) 0%,
+    rgba(255, 110, 199, 0.3) 50%,
+    rgba(255, 110, 199, 0.1) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .hide-mobile {
+    @apply hidden;
+  }
+}
+
+@media (min-width: 641px) {
+  .show-mobile {
+    @apply hidden;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+
+  header,
+  footer,
+  nav {
+    @apply hidden;
+  }
+}
