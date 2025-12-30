@@ -30,7 +30,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* <nav className="hidden md:flex items-center gap-6">
             <Link href="/games" className="nav-link text-playzo-cyan hover:text-playzo-pink transition-colors font-semibold">
               Games
             </Link>
@@ -42,9 +42,9 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Search and Actions */}
+          
           <div className="flex items-center gap-3 ml-auto">
-            {/* Search */}
+            
             <form onSubmit={handleSearch} className={`search-form transition-all duration-300 ${isSearchOpen ? 'w-64' : 'w-10'}`}>
               <div className="relative">
                 <input
@@ -68,23 +68,23 @@ export default function Header() {
                   </svg>
                 </button>
               </div>
-            </form>
+            </form>  */}
 
-            {/* Auth Button */}
-            <Link href="/account" className="hidden sm:flex px-4 py-2 bg-playzo-pink hover:bg-playzo-warm text-white font-bold rounded-lg transition-all duration-300 hover:shadow-neon-lg items-center gap-2">
+          {/* Auth Button */}
+          {/* <Link href="/account" className="hidden sm:flex px-4 py-2 bg-playzo-pink hover:bg-playzo-warm text-white font-bold rounded-lg transition-all duration-300 hover:shadow-neon-lg items-center gap-2">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
               <span>Sign In</span>
-            </Link>
+            </Link> */}
 
-            {/* Mobile Menu Toggle */}
-            <button className="md:hidden p-2 text-playzo-cyan hover:text-playzo-pink transition-colors">
+          {/* Mobile Menu Toggle */}
+          {/* <button className="md:hidden p-2 text-playzo-cyan hover:text-playzo-pink transition-colors">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </button>
-          </div>
+            </button> */}
+          {/* </div> */}
         </div>
       </div>
     </header>

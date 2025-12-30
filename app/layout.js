@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google AdSense */}
+       
         {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
           <script
             async
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
           />
         )}
 
-        {/* Google Analytics */}
+        
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <script
@@ -113,13 +113,13 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-        {/* Preconnect to important domains */}
+       
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
-        {/* DNS Prefetch */}
+       
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googleadservices.com" />
       </head>

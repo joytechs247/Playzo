@@ -83,11 +83,14 @@ export default async function HomePage() {
               >
                 Start Playing
               </Link>
-              <button
-                className="btn-outline"
-              >
-                Learn More
-              </button>
+              <a href="/categories" >
+                <button
+                  className="btn-outline"
+                >
+                  View Categories
+                </button>
+              </a>
+
             </div>
           </div>
 
@@ -140,7 +143,7 @@ export default async function HomePage() {
 
       {/* Categories Section */}
       {categories.length > 0 && (
-        <section className="categories py-16">
+        <section className="categories py-16" id="categories">
           <div className="max-w-container mx-auto px-4 lg:px-8">
             <div className="mb-8">
               <h2 className="text-3xl md:text-4xl font-headline font-black text-white mb-2">
@@ -210,7 +213,7 @@ export default async function HomePage() {
       {/* CTA Section */}
       <section className="cta-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-playzo-pink/10 via-playzo-cyan/10 to-playzo-warm/10" />
-        
+
         <div className="max-w-container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-black text-white mb-4">
             Ready to Join the Fun?
