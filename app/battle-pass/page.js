@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import { useAuth } from '@/components/AuthProvider';
 import SEOHead from '@/components/SEOHead';
