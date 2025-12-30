@@ -33,7 +33,7 @@ export const metadata = {
     url: process.env.NEXT_PUBLIC_BASE_URL || 'https://playzo.vercel.app',
     siteName: 'Playzo',
     title: 'Playzo — Free Browser Games',
-    description: 'Play thousands of free browser games instantly. Join the community, climb leaderboards, and earn rewards.',
+    description: 'Play thousands of free browser games instantly.',
     images: [
       {
         url: '/og-default.png',
@@ -69,8 +69,8 @@ export const metadata = {
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   manifest: '/manifest.json',
-  themeColor: '#FF6EC7',
 };
+
 
 export const viewport = {
   width: 'device-width',
@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-       
+
         {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
           <script
             async
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
           />
         )}
 
-        
+
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <script
@@ -113,13 +113,13 @@ export default function RootLayout({ children }) {
           </>
         )}
 
-       
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
-       
+
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googleadservices.com" />
       </head>
